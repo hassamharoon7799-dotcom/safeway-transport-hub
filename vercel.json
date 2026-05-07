@@ -3,14 +3,14 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "functions": {
-    "dist/server/index.mjs": {
-      "runtime": "@vercel/node"
+    "dist/server/index.js": {
+      "runtime": "@vercel/node@18"
     }
   },
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/dist/server/index.mjs"
+      "destination": "/api/__ssr__"
     }
   ]
 }
