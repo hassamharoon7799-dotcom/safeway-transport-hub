@@ -26,14 +26,19 @@ export function Services() {
 
   useGSAP(
     () => {
-      gsap.from(".service-card", {
-        y: 80,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.08,
-        ease: "power3.out",
-        scrollTrigger: { trigger: root.current, start: "top 75%" },
-      });
+      gsap.fromTo(
+        ".service-card",
+        { y: 80, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.9,
+          stagger: 0.08,
+          ease: "power3.out",
+          scrollTrigger: { trigger: root.current, start: "top 85%", toggleActions: "play none none none" },
+        }
+      );
+      ScrollTrigger.refresh();
     },
     { scope: root }
   );
