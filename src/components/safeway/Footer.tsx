@@ -38,9 +38,9 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/60">Contact</h4>
             <ul className="mt-4 space-y-3 text-primary-foreground/80">
-              <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-1 text-primary-glow" /> 0344 9494410</li>
-              <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-1 text-primary-glow" /> info@safewaybusrentals.pk</li>
-              <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-1 text-primary-glow" /> Serving all major cities across Pakistan</li>
+              <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-1 text-primary-glow" /><span>0344 9494410</span></li>
+              <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-1 text-primary-glow" /><span>info@safewaybusrentals.pk</span></li>
+              <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-1 text-primary-glow" /><span>Serving all major cities across Pakistan</span></li>
             </ul>
           </div>
         </div>

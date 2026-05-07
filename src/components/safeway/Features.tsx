@@ -20,14 +20,19 @@ export function Features() {
 
   useGSAP(
     () => {
-      gsap.from(".feature-card", {
-        y: 60,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power3.out",
-        scrollTrigger: { trigger: root.current, start: "top 75%" },
-      });
+      gsap.fromTo(
+        ".feature-card",
+        { y: 60, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: { trigger: root.current, start: "top 85%", toggleActions: "play none none none" },
+        }
+      );
+      ScrollTrigger.refresh();
     },
     { scope: root }
   );
